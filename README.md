@@ -18,7 +18,6 @@
 ├── notes.md                # 笔记页
 ├── thoughts.md             # 随想页
 ├── archive.md              # 归档页
-├── tags.md                 # 标签页
 └── _config.yml             # Jekyll 配置
 ```
 
@@ -65,7 +64,6 @@ title: "文章标题"
 date: 2026-07-25 10:00:00 +0800
 categories: [notes]
 category_label: "个人笔记"
-tags: [notes, tools]
 excerpt_text: "这是一句话摘要。"
 ---
 ```
@@ -99,6 +97,8 @@ print("hello blog")
 - `tools`：工具经验。
 
 如果以后文章多了，可以继续增加 `reading`、`summary`、`research` 等分类。
+
+当前版本采用极简文字刊物风格。第一版只保留分类、归档和文章列表，避免维护成本过高。
 
 ## 图片和附件
 
