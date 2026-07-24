@@ -1,9 +1,11 @@
 ---
+layout: post
 title: "PFC 学习记录：接触数据与三维玫瑰图"
 date: 2026-07-24 20:40:00 +0800
 categories: [notes]
 category_label: "Notes"
 excerpt_text: "从示例材料整理出的一篇技术笔记：在 PFC 中做三维玫瑰图时，最少应该保存哪些接触数据。"
+description: "从示例材料整理出的一篇技术笔记：在 PFC 中做三维玫瑰图时，最少应该保存哪些接触数据。"
 ---
 
 这篇文章来自我放在 `BlogMaterial` 文件夹里的 PFC 讨论材料。原材料很长，这里先整理成适合博客展示和后续扩展的一版笔记。
