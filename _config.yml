@@ -1,0 +1,48 @@
+title: "KungfuPanda Notes"
+subtitle: "生活随想、工具经验与个人笔记"
+description: "一个用于长期记录生活随想、工具经验和个人笔记的中文个人博客。"
+lang: "zh-CN"
+timezone: "Asia/Shanghai"
+url: "https://kungfupanda0823.github.io"
+baseurl: ""
+author:
+  name: "KungfuPanda"
+  bio: "在这里整理日常观察、工具经验、学习笔记和那些暂时还没有归处的想法。"
+
+permalink: /:categories/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "KungfuPanda"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
+  - .github
