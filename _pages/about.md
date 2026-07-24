@@ -6,7 +6,7 @@ subtitle: personal notes / tools / thoughts
 
 profile:
   align: right
-  image: kungfupanda_profile.svg
+  image: kungfupanda_profile.png
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Personal blog</p>
