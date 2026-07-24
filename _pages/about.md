@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: personal notes · tools · thoughts
+subtitle: personal notes / tools / thoughts
 
 profile:
   align: right
