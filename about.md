@@ -1,20 +1,20 @@
 ---
-title: 关于我
+title: About
 permalink: /about/
 eyebrow: About
-description: "一个用于长期记录与整理的个人角落。"
+description: "A quiet personal corner for long-term notes and writing."
 ---
 
-你好，我是 KungfuPanda。
+Hi, I am KungfuPanda.
 
-这个网站用来记录我的生活随想、工具经验和个人笔记。它不是一个只为展示成果而存在的网站，也不是一个必须保持“完美结构”的资料库。它更像一个慢慢生长的工作台：有些内容会很完整，有些只是一个问题、一段想法、一条踩坑记录。
+This site is a small personal space for notes, tools, thoughts, and writing that I may want to revisit later. It is not meant to be a polished portfolio only for finished work. It is closer to a quiet workbench: some entries are complete, while others may begin as a question, a fragment, or a record of a problem solved.
 
-我希望这里长期保留三类内容：
+I mainly keep three kinds of material here:
 
-- 生活随想：对日常、阅读、阶段变化的观察；
-- 工具经验：GitHub、写作工具、数据处理、AI 工具等使用记录；
-- 个人笔记：学习过程中值得回看的概念、方法和小结。
+- thoughts: observations on everyday life, reading, and different stages of work;
+- tools: practical notes on GitHub, writing tools, data processing, and AI tools;
+- notes: concepts, methods, and small summaries worth keeping.
 
-如果说这个博客有什么气质，我希望它是：简洁、克制、耐读，不喧哗，但能持续留下痕迹。
+The style I want is simple, restrained, readable, and calm. The site should stay quiet enough for the writing to matter.
 
-后续可以在这里补充邮箱、GitHub、个人简介或其它公开主页链接。
+You can add email, GitHub, a short bio, or public profile links here later.

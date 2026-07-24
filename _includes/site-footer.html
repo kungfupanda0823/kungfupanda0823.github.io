@@ -1,11 +1,12 @@
 <footer class="site-footer">
-  <div class="stats-card" aria-label="访问统计">
-    <span>今日 <strong id="today-visits">—</strong></span>
-    <span>历史 <strong id="total-visits">—</strong></span>
-    <span>更新 <strong>{{ site.time | date: "%Y-%m-%d" }}</strong></span>
+  <div class="stats-card" aria-label="Visitor statistics">
+    <span>Site views <strong id="busuanzi_value_site_pv">—</strong></span>
+    <span>Visitors <strong id="busuanzi_value_site_uv">—</strong></span>
+    <span>Page views <strong id="busuanzi_value_page_pv">—</strong></span>
+    <span>Updated <strong>{{ site.time | date: "%Y-%m-%d" }}</strong></span>
   </div>
   <p>
     © {{ site.time | date: "%Y" }} {{ site.author.name }}
   </p>
 </footer>
-<script src="{{ '/assets/js/visit-stats.js' | relative_url }}" defer></script>
+<script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>

@@ -2,7 +2,7 @@
 title: "为什么我要建立这个个人网站"
 date: 2026-07-24 20:35:00 +0800
 categories: [thoughts]
-category_label: "生活随想"
+category_label: "Thoughts"
 excerpt_text: "给这个博客一个最朴素的起点：不是展示完美，而是保留真实、可回看的记录。"
 ---
 

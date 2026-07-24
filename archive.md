@@ -1,8 +1,8 @@
 ---
-title: 归档
+title: Archive
 permalink: /archive/
 eyebrow: Archive
-description: "按时间查看所有文章。"
+description: "All posts in chronological order."
 ---
 
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}

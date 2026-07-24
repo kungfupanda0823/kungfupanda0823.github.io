@@ -2,7 +2,7 @@
 title: "读书笔记：如何建立长期知识系统"
 date: 2026-07-24 20:45:00 +0800
 categories: [tools]
-category_label: "工具经验"
+category_label: "Tools"
 excerpt_text: "长期记录不靠一时兴奋，而靠足够低的写入成本、清晰的归档方式和定期回看。"
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: 笔记
+title: Notes
 permalink: /notes/
 eyebrow: Notes
-description: "把工具经验、学习片段和可复用的方法放在这里。"
+description: "Tool notes, reusable methods, and fragments worth returning to."
 ---
 
 {% assign note_count = 0 %}
@@ -20,17 +20,18 @@ description: "把工具经验、学习片段和可复用的方法放在这里。
       {% assign note_count = note_count | plus: 1 %}
       {% assign first_category = post.categories | first %}
       <a class="post-card" href="{{ post.url | relative_url }}">
-        <h3>{{ post.title }}</h3>
-        <div class="post-meta">
+        <div class="post-date">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-          <span>{{ post.category_label | default: first_category }}</span>
         </div>
-        <p>{{ post.excerpt_text | default: post.excerpt | strip_html | truncate: 110 }}</p>
+        <div class="post-summary">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt_text | default: post.excerpt | strip_html | truncate: 110 }}</p>
+        </div>
       </a>
     {% endif %}
   {% endfor %}
 </div>
 
 {% if note_count == 0 %}
-  暂时还没有笔记。下一篇文章就从一个小问题开始。
+  No notes yet.
 {% endif %}

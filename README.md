@@ -1,86 +1,90 @@
-# KungfuPanda Notes
+# KungfuPanda
 
-这是一个基于 Jekyll 和 GitHub Pages 的个人博客网站，用于长期记录生活随想、工具经验和个人笔记。
+This is a Jekyll + GitHub Pages personal blog. The current visual direction follows an al-folio-like minimal profile style: white background, compact top navigation, teal accent links, an About/Profile home section, clean post cards, and restrained typography.
 
-## 网站结构
+The interface is in English. Post content can still be written in Chinese.
+
+## Project structure
 
 ```text
 .
-├── _posts/                 # 博客文章，文件名使用 日期-英文标题.md
-├── _layouts/               # 页面布局模板
-├── _includes/              # 页头、页脚等复用片段
+├── _posts/                 # Blog posts: YYYY-MM-DD-english-title.md
+├── _layouts/               # Page and post templates
+├── _includes/              # Header and footer
 ├── assets/
-│   ├── css/                # 自定义样式
-│   ├── js/                 # 访问统计等脚本
-│   ├── images/posts/       # 文章图片
-│   └── files/              # 可下载文件
-├── about.md                # 关于我
-├── notes.md                # 笔记页
-├── thoughts.md             # 随想页
-├── archive.md              # 归档页
-└── _config.yml             # Jekyll 配置
+│   ├── css/main.css        # Theme colors, layout, font sizes
+│   ├── images/posts/       # Post images
+│   └── files/              # Downloadable files
+├── about.md                # About page
+├── notes.md                # Notes page
+├── thoughts.md             # Thoughts page
+├── archive.md              # Archive page
+├── index.md                # Homepage
+└── _config.yml             # Site config
 ```
 
-## 本地预览
+## Local preview
 
-第一次使用前，需要先安装 Ruby 和 Bundler。然后在仓库根目录运行：
+Install Ruby and Bundler first, then run:
 
 ```powershell
 bundle install
 bundle exec jekyll serve
 ```
 
-启动后打开：
+Open:
 
 ```text
 http://127.0.0.1:4000
 ```
 
-如果只是想构建检查，可以运行：
+To build-check only:
 
 ```powershell
 bundle exec jekyll build
 ```
 
-## 如何新增文章
+## Add a new post
 
-在 `_posts` 文件夹中新建 Markdown 文件，文件名格式建议为：
+Create a Markdown file in `_posts/`:
 
 ```text
 YYYY-MM-DD-english-title.md
 ```
 
-例如：
+Example:
 
 ```text
 2026-07-25-my-first-note.md
 ```
 
-文章开头需要写 front matter：
+Use this front matter:
 
 ```yaml
 ---
-title: "文章标题"
+title: "Your post title"
 date: 2026-07-25 10:00:00 +0800
 categories: [notes]
-category_label: "个人笔记"
-excerpt_text: "这是一句话摘要。"
+category_label: "Notes"
+excerpt_text: "One-sentence summary."
 ---
 ```
 
-正文直接使用 Markdown 编写。数学公式支持 MathJax：
+Then write the body in Markdown.
+
+MathJax is enabled:
 
 ```markdown
-行内公式：$E = mc^2$
+Inline math: $E = mc^2$
 
-块级公式：
+Block math:
 
 $$
 E = mc^2
 $$
 ```
 
-代码块示例：
+Code blocks are supported:
 
 ````markdown
 ```python
@@ -88,41 +92,39 @@ print("hello blog")
 ```
 ````
 
-## 分类建议
+## Categories
 
-当前模板默认使用这些分类：
+Use these categories first:
 
-- `thoughts`：生活随想；
-- `notes`：个人笔记；
-- `tools`：工具经验。
+- `thoughts`: personal reflections;
+- `notes`: reusable notes;
+- `tools`: tool records.
 
-如果以后文章多了，可以继续增加 `reading`、`summary`、`research` 等分类。
+If the site grows, you can add categories such as `reading`, `summary`, or `research`.
 
-当前版本采用极简文字刊物风格。第一版只保留分类、归档和文章列表，避免维护成本过高。
+## Images and files
 
-## 图片和附件
-
-文章图片建议放在：
+Post images:
 
 ```text
 assets/images/posts/YYYY-MM-DD-post-name/
 ```
 
-附件建议放在：
+Downloadable files:
 
 ```text
 assets/files/
 ```
 
-在文章中引用图片：
+Image example:
 
 ```markdown
-![图片说明](/assets/images/posts/2026-07-25-my-note/fig1.png)
+![Figure description](/assets/images/posts/2026-07-25-my-note/fig1.png)
 ```
 
-## 提交并发布到 GitHub Pages
+## Publish to GitHub Pages
 
-修改完成后提交到 GitHub：
+After editing:
 
 ```powershell
 git add .
@@ -130,23 +132,46 @@ git commit -m "Update blog"
 git push
 ```
 
-仓库包含 `.github/workflows/pages.yml`，推送到 `main` 分支后会自动构建并部署到 GitHub Pages。
+The repository uses `.github/workflows/pages.yml`. Pushing to `main` triggers GitHub Actions and deploys to GitHub Pages.
 
-在 GitHub 仓库中确认 Pages 设置：
+Confirm GitHub Pages settings:
 
-1. 打开仓库 `Settings`；
-2. 进入 `Pages`；
-3. `Build and deployment` 选择 `GitHub Actions`；
-4. 等待 Actions 运行完成。
+1. Open repository `Settings`;
+2. Go to `Pages`;
+3. Set `Build and deployment` to `GitHub Actions`;
+4. Wait for Actions to turn green.
 
-默认网址通常是：
+Site URL:
 
 ```text
 https://kungfupanda0823.github.io
 ```
 
-## 关于访问统计
+## Visitor statistics
 
-页脚中的“今日访问”和“历史访问”目前使用浏览器 `localStorage` 统计，适合静态站第一版展示和本机查看。它不是全网真实访客统计。
+The bottom-right visitor panel uses a Busuanzi-compatible public script:
 
-如果以后需要真实全站访问统计，可以接入 GoatCounter、Plausible、Umami、Google Analytics 或 GitHub Pages 兼容的第三方统计服务。
+```html
+https://busuanzi.icodeq.com/busuanzi.pure.mini.js
+```
+
+It records network-side cumulative counts:
+
+- `Site views`: total site page views;
+- `Visitors`: total unique visitors estimated by the counter service;
+- `Page views`: current page views.
+
+If you later need a dashboard, daily reports, referrers, privacy controls, or more reliable analytics, replace it with GoatCounter, Umami, Plausible, or Google Analytics.
+
+## What to edit later
+
+- Site title, subtitle, author text: `_config.yml`
+- Top navigation: `_includes/site-header.html`
+- Visitor panel and footer: `_includes/site-footer.html`
+- Homepage profile and latest posts: `index.md`
+- Theme colors, layout, spacing, font sizes: `assets/css/main.css`
+- About page text: `about.md`
+- Notes page: `notes.md`
+- Thoughts page: `thoughts.md`
+- Archive page: `archive.md`
+- Blog posts: `_posts/YYYY-MM-DD-english-title.md`

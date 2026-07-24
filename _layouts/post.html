@@ -4,9 +4,9 @@ layout: default
 
 <article class="post">
   <header class="post-header">
-    <a class="back-link" href="{{ '/archive/' | relative_url }}">← 回到归档</a>
+    <a class="back-link" href="{{ '/archive/' | relative_url }}">← Back to archive</a>
     {% assign first_category = page.categories | first %}
-    <p class="eyebrow">{{ page.category_label | default: first_category | default: "文章" }}</p>
+    <p class="eyebrow">{{ page.category_label | default: first_category | default: "Post" }}</p>
     <h1>{{ page.title }}</h1>
     {% if page.excerpt_text %}
       <p class="page-description">{{ page.excerpt_text }}</p>
