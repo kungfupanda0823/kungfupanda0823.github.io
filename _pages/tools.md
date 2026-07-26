@@ -2,7 +2,7 @@
 layout: page
 title: Tools
 permalink: /tools/
-description: Software, scripts, workflows, and practical methods.
+description: Software or workflows.
 nav: true
 nav_order: 2
 ---

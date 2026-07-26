@@ -2,7 +2,7 @@
 layout: page
 title: Mood
 permalink: /mood/
-description: Reflections, fragments, and thoughts that do not need a conclusion.
+description: The fucking XXX.
 nav: true
 nav_order: 4
 ---

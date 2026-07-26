@@ -25,6 +25,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Welcome. This is my personal blog.
+Welcome. 
 
-I use this site as a quiet place to keep practical records: small tool workflows, reading fragments, personal observations, and technical notes that may be useful later. It is not a pure research website; it is closer to a personal knowledge notebook.
+The I of today writes down the I of yesterday; the I of tomorrow will long for the I of today.
+
+Bingo!

@@ -2,7 +2,7 @@
 layout: page
 title: Lively
 permalink: /lively/
-description: Places, books, films, photographs, and vivid moments.
+description: Maybe about lovely life.
 nav: true
 nav_order: 3
 ---
