@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Notes
-permalink: /notes/
-description: Technical notes, reading records, and ideas worth keeping.
+title: Lively
+permalink: /lively/
+description: Places, books, films, photographs, and vivid moments.
 nav: true
-nav_order: 1
+nav_order: 3
 ---
 
 <div class="category-index">
   <ul class="post-list category-post-list">
     {% assign entry_count = 0 %}
     {% for post in site.posts %}
-      {% if post.categories contains "notes" %}
+      {% if post.categories contains "lively" %}
         {% assign entry_count = entry_count | plus: 1 %}
         <li>
           <h2 class="category-post-title">
@@ -27,6 +27,6 @@ nav_order: 1
   </ul>
 
   {% if entry_count == 0 %}
-    <p class="empty-category">No notes yet. Add a post with <code>categories: [notes]</code>.</p>
+    <p class="empty-category">No lively entries yet. Add a post with <code>categories: [lively]</code>.</p>
   {% endif %}
 </div>

@@ -2,16 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: personal notes / tools / thoughts
+subtitle: Zest Carries Forever
 
 profile:
   align: right
   image: kungfupanda_profile.png
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Personal blog</p>
-    <p>Built with al-folio</p>
-    <p>GitHub Pages</p>
+    <p class="profile-motto">I AM WHAT I AM</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +25,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Welcome. This is my personal blog for notes, tools, thoughts, and long-term writing.
+Welcome. This is my personal blog.
 
 I use this site as a quiet place to keep practical records: small tool workflows, reading fragments, personal observations, and technical notes that may be useful later. It is not a pure research website; it is closer to a personal knowledge notebook.
-
-The site follows the [al-folio](https://github.com/alshedivat/al-folio) style: clean typography, generous whitespace, compact navigation, and a restrained academic-profile layout. Content comes first; decoration stays quiet.

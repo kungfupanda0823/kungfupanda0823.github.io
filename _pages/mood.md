@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Notes
-permalink: /notes/
-description: Technical notes, reading records, and ideas worth keeping.
+title: Mood
+permalink: /mood/
+description: Reflections, fragments, and thoughts that do not need a conclusion.
 nav: true
-nav_order: 1
+nav_order: 4
 ---
 
 <div class="category-index">
   <ul class="post-list category-post-list">
     {% assign entry_count = 0 %}
     {% for post in site.posts %}
-      {% if post.categories contains "notes" %}
+      {% if post.categories contains "mood" %}
         {% assign entry_count = entry_count | plus: 1 %}
         <li>
           <h2 class="category-post-title">
@@ -27,6 +27,6 @@ nav_order: 1
   </ul>
 
   {% if entry_count == 0 %}
-    <p class="empty-category">No notes yet. Add a post with <code>categories: [notes]</code>.</p>
+    <p class="empty-category">No mood entries yet. Add a post with <code>categories: [mood]</code>.</p>
   {% endif %}
 </div>

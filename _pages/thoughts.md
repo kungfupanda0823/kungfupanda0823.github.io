@@ -3,7 +3,7 @@ layout: page
 title: thoughts
 permalink: /thoughts/
 description: Personal reflections and loose fragments.
-nav: true
+nav: false
 nav_order: 3
 ---
 
