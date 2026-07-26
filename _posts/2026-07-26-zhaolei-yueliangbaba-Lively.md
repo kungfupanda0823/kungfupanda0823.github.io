@@ -2,7 +2,7 @@
 layout: post
 title: "赵雷-月亮粑粑"
 date: 2026-07-26 22:39:00 +0800
-categories: [Lively]
+categories: [lively]
 category_label: "Lively"
 excerpt_text: "月亮月亮我问你 明天我将在哪里"
 description: "什么时候我已长大了 你却依然很平静"
