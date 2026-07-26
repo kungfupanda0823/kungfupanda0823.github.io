@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Welcome. 
+Hello,
 
 The I of today writes down the I of yesterday; the I of tomorrow will long for the I of today.
 

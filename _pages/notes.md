@@ -2,7 +2,7 @@
 layout: page
 title: Notes
 permalink: /notes/
-description: Technical notes, reading records, and ideas worth keeping.
+description: Ideas worth keeping.
 nav: true
 nav_order: 1
 ---
