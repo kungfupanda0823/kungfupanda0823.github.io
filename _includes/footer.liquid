@@ -1,8 +1,8 @@
 {% capture footer_contents %}
-  <span class="footer-motto">{{ site.footer_text | default: "Forever 37.3℃" }}</span>
+  <span class="footer-motto">{{ site.footer_text | default: "Forever 37.3&#8451;" }}</span>
   <span class="footer-dot" aria-hidden="true">·</span>
   <span class="footer-views" title="Total page views of this website">
-    Views <span id="finicount_views">--</span>
+    Views <span id="busuanzi_value_site_pv">--</span>
   </span>
 {% endcapture %}
 
@@ -28,4 +28,4 @@
 {% endif %}
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-<script async src="https://finicounter.eu.org/finicounter.js"></script>
+<script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>

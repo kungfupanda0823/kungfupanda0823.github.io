@@ -1,5 +1,5 @@
 # Social links displayed by al-folio.
-# Fill in more items later when you want them public.
+# Keep the About page minimal: GitHub + RSS only.
 
 github_username: kungfupanda0823
 rss_icon: true

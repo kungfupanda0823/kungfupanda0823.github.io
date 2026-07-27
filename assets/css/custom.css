@@ -110,12 +110,56 @@ pre,
 }
 
 /* Small navigation refinements. */
+.navbar-brand,
+.navbar-brand.title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .navbar .nav-link,
 .navbar-nav .nav-link {
   letter-spacing: 0.015em;
 }
 
+/* About page social area: keep only one quiet RSS icon. */
+.social .contact-icons {
+  margin-top: 0.55rem;
+  margin-bottom: 0.45rem;
+}
+
+.social .contact-icons a {
+  color: var(--global-text-color);
+  opacity: 0.88;
+  transition:
+    color 0.18s ease,
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.social .contact-icons a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.social .contact-icons i {
+  font-size: clamp(1.2rem, 3vw, 1.65rem);
+}
+
+.contact-note {
+  margin-top: 0.25rem;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+}
+
 /* Footer: motto and counter on one restrained line. */
+footer.fixed-bottom,
+footer.sticky-bottom {
+  border-top: 1px solid color-mix(in srgb, var(--global-text-color) 9%, transparent);
+  background: color-mix(in srgb, var(--global-bg-color) 92%, #f6efe7 8%);
+  color: color-mix(in srgb, var(--global-text-color) 64%, #8c7868 36%);
+  box-shadow: 0 -8px 24px color-mix(in srgb, var(--global-text-color) 5%, transparent);
+}
+
 footer.fixed-bottom .container,
 footer.sticky-bottom .container {
   display: flex;
@@ -128,11 +172,12 @@ footer.sticky-bottom .container {
 .footer-motto {
   font-weight: 500;
   letter-spacing: 0.025em;
+  color: color-mix(in srgb, var(--global-text-color) 70%, #7b6758 30%);
 }
 
 .footer-dot,
 .footer-views {
-  color: var(--global-footer-text-color);
+  color: color-mix(in srgb, var(--global-text-color) 45%, #9c887a 55%);
   opacity: 0.82;
 }
 
