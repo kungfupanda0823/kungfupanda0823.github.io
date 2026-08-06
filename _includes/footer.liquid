@@ -1,9 +1,11 @@
 {% capture footer_contents %}
   <span class="footer-motto">{{ site.footer_text | default: "Forever 37.3&#8451;" }}</span>
-  <span class="footer-dot" aria-hidden="true">·</span>
+  <span class="footer-dot" aria-hidden="true">/</span>
   <span class="footer-views" title="Total page views of this website">
     Views <span id="busuanzi_value_site_pv">--</span>
   </span>
+  <span class="footer-dot" aria-hidden="true">/</span>
+  <a class="footer-write-link" href="{{ '/admin/' | relative_url }}">Write</a>
 {% endcapture %}
 
 {% if site.footer_fixed %}
@@ -28,4 +30,5 @@
 {% endif %}
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+{% include web_editing.liquid %}
 <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
