@@ -1,44 +1,48 @@
-# 个人博客网页编辑教程
+# 个人博客本地维护教程
 
-这个博客仍然是 GitHub Pages + Jekyll 静态博客，不需要服务器、不需要数据库。
-现在增加了“网页编辑入口”：你可以在浏览器里写文章、改文章，然后 GitHub 会自动提交并重新部署网站。
-
-## 一、以后怎么在网页上写新文章
-
-打开你的博客后，点击网页底部的：
+这个博客采用 GitHub Pages + Jekyll 静态博客方案。推荐维护方式是：
 
 ```text
-Write
+本地修改文件 -> GitHub Desktop 提交 -> Push origin -> GitHub Pages 自动更新
 ```
 
-或者直接访问：
+这样最稳定，也最适合长期维护个人笔记博客。
+
+## 1. 打开本地博客文件夹
+
+你的本地仓库位置是：
 
 ```text
-https://kungfupanda0823.github.io/admin/
+F:\009Blog\GithubProjects\kungfupanda0823.github.io
 ```
 
-然后点击：
+建议用 VS Code 打开这个文件夹。
+
+不要只打开某一个 Markdown 文件，最好打开整个仓库文件夹，这样图片路径、文章目录、配置文件都容易管理。
+
+## 2. 新增一篇文章
+
+所有文章都放在：
 
 ```text
-New post
+_posts
 ```
 
-它会打开 GitHub 的网页新建文件界面。
+新建文件时，文件名使用：
 
-文件名写成这种格式：
+```text
+YYYY-MM-DD-english-title.md
+```
+
+例如：
 
 ```text
 2026-08-06-my-new-note.md
 ```
 
-建议规则：
+不要用中文文件名，避免路径兼容问题。
 
-- 日期用 `YYYY-MM-DD`
-- 后面用英文小写
-- 单词之间用 `-`
-- 不要用中文文件名
-
-然后把下面模板粘贴进去：
+文章模板：
 
 ```markdown
 ---
@@ -52,21 +56,9 @@ categories: [notes]
 正文从这里开始写。
 ```
 
-写完后，点击 GitHub 页面右上角或底部的：
-
-```text
-Commit changes...
-```
-
-GitHub 会自动保存并触发 Pages 更新。
-
-## 二、文章应该放到哪个分类
+## 3. 选择文章分类
 
 文章开头的 `categories` 决定它显示在哪个栏目。
-
-```yaml
-categories: [notes]
-```
 
 可用分类：
 
@@ -84,69 +76,69 @@ categories: [mood]
 - `lively`：生活记录、见闻、照片、日常
 - `mood`：情绪、随想、短句、私人表达
 
-## 三、怎么修改已有文章
+如果你想让一篇文章显示在 `Tools` 栏目，就写：
 
-打开任意一篇文章。
-
-页面右下角会出现：
-
-```text
-Edit on GitHub
+```yaml
+categories: [tools]
 ```
 
-点击后会直接进入这篇文章对应的 GitHub 网页编辑界面。
+## 4. 修改已有文章
 
-修改完成后点击：
-
-```text
-Commit changes...
-```
-
-这样就不用打开本地文件夹，也不用手动 `git add / commit / push`。
-
-## 四、怎么修改 About 页面
-
-访问：
+进入：
 
 ```text
-https://kungfupanda0823.github.io/admin/
+_posts
 ```
 
-点击：
+找到对应的 `.md` 文件，直接修改正文即可。
 
-```text
-Edit About
+文章标题改这里：
+
+```yaml
+title: 你的文章标题
 ```
 
-它会打开：
+文章摘要改这里：
+
+```yaml
+description: 这里写一句话摘要。
+```
+
+文章分类改这里：
+
+```yaml
+categories: [notes]
+```
+
+## 5. 修改 About 页面
+
+About 页面文件是：
 
 ```text
 _pages/about.md
 ```
 
-你主要改这些位置：
+名字下面的小标题：
 
 ```yaml
 subtitle: Zest Carries Forever
 ```
 
-这是名字下面的小标题。
+头像下面的小字：
 
 ```yaml
 more_info: >
   <p class="profile-motto">I AM WHAT I AM</p>
 ```
 
-这是头像下面的小字。
+第二个 `---` 后面的文字，就是 About 页面的正文。
 
-第二个 `---` 后面的正文，是 About 页面主体内容。
-
-## 五、怎么修改顶部栏目
+## 6. 修改顶部栏目
 
 栏目页面都在：
 
 ```text
-_pages/
+_pages
 ```
 
 当前栏目：
@@ -157,57 +149,63 @@ _pages/
 - `_pages/lively.md`
 - `_pages/mood.md`
 
-如果要改显示名称，改文件开头：
+显示名称改这里：
 
 ```yaml
 title: Notes
 ```
 
-如果要控制顺序，改：
+顶部排序改这里：
 
 ```yaml
 nav_order: 1
 ```
 
-如果不想显示在顶部导航，改成：
+是否显示在顶部导航：
+
+```yaml
+nav: true
+```
+
+如果不想显示：
 
 ```yaml
 nav: false
 ```
 
-## 六、怎么修改页脚文字和访问统计
+## 7. 修改页脚文字和访问统计
 
-页脚主文字在：
+全局配置文件是：
 
 ```text
 _config.yml
 ```
 
-找到：
+页脚文字：
 
 ```yaml
 footer_text: "Forever 37.3&#8451;"
 ```
 
-这里的 `&#8451;` 会在网页里显示为 `℃`，这样可以避免 Windows 编码把符号弄坏。
+这里的 `&#8451;` 会在网页里显示为 `℃`，可以避免 Windows 编码问题。
 
-访问统计在：
+访问统计位置：
 
 ```text
 _includes/footer.liquid
 ```
 
-目前用的是不蒜子统计：
+目前使用不蒜子统计：
 
 ```html
 <span id="busuanzi_value_site_pv">--</span>
 ```
 
-如果统计没有立刻显示，通常是脚本加载、网络或浏览器拦截问题，不影响博客正文。
+如果统计没有显示，常见原因是浏览器插件、网络或第三方统计脚本加载失败。
 
-## 七、怎么修改样式
+## 8. 修改样式
 
-大多数自定义样式在：
+主要样式文件是：
 
 ```text
 assets/css/custom.css
@@ -219,16 +217,47 @@ assets/css/custom.css
 - 分类文章标题大小：搜索 `.category-post-title`
 - 图标大小：搜索 `.social .contact-icons i`
 - 页脚颜色：搜索 `Footer: motto and counter`
-- 网页编辑按钮：搜索 `.web-edit-link`
+- About 页面头像样式：搜索 `.profile img`
 
-## 八、注意事项
+## 9. 用 GitHub Desktop 提交并推送
 
-网页编辑虽然不用本地 Git，但本质上仍然是在 GitHub 仓库里提交文件。
+本地文件改完后：
 
-所以你需要注意：
+1. 打开 GitHub Desktop
+2. 选择仓库 `kungfupanda0823.github.io`
+3. 左下角会看到修改过的文件
+4. 在 `Summary` 写一句提交说明，例如：
 
-- 改完一定要点 `Commit changes...`
-- 文件名尽量用英文
-- 文章开头的 `---` 配置不要删
-- `date` 格式不要乱
-- `categories` 只用已有的四类：`notes / tools / lively / mood`
+```text
+Update blog post
+```
+
+5. 点击：
+
+```text
+Commit to main
+```
+
+6. 再点击右上角：
+
+```text
+Push origin
+```
+
+推送后 GitHub Pages 会自动重新部署网站。通常等几十秒到几分钟即可看到更新。
+
+## 10. 最推荐的日常更新流程
+
+每次更新博客时，按这个顺序：
+
+```text
+1. 在 _posts 里新增或修改 Markdown 文章
+2. 检查 title / date / description / categories
+3. 保存文件
+4. 打开 GitHub Desktop
+5. Commit to main
+6. Push origin
+7. 等 GitHub Pages 自动更新
+```
+
+这就是以后维护博客的主流程。
